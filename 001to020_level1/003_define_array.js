@@ -1,4 +1,3 @@
-
 //javascript Array 만들기
 // [] 를 이용하는 방법
 let numbers = [1, 2, 3];
@@ -8,4 +7,7 @@ let strings = ["hello", "bye", "welcome"];
 let numbers2 = new Array(1, 2, 3);
 let strings2 = new Array("hello", "bye", "welcome");
 
-typeof Array;
+console.log(typeof Array());
+console.log(typeof numbers);
+console.log(typeof numbers2);
+console.log(numbers2)
