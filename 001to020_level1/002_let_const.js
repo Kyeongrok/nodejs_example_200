@@ -1,5 +1,5 @@
-let fruit1 = "apple";
-fruit1 = "banana";
+let fruit1 = 'apple';
+fruit1 = 'obanana';
 console.log(fruit1);
 
 const pi = 3.14;

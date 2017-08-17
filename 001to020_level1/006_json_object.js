@@ -1,7 +1,8 @@
 let user = {};
-user['name'] = "kyeongrok";
+user['name'] = 'kyeongrok';
 user['age'] = 31;
 
-let user2 = {name: "kyeongrok", age:31};    //key에 해당하는 값에 원래는 ""를 붙여주어야 하지만 코딩 편의상 붙혀주지 않아도 됩니다.
-console.log(user2);
+console.log(user);
 
+let user2 = {name: 'kyeongrok', age:31};    //key에 해당하는 값에 원래는 ""를 붙여주어야 하지만 코딩 편의상 붙혀주지 않아도 됩니다.
+console.log(user2);
