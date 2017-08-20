@@ -4,3 +4,5 @@ console.log(user['name']);
 console.log(user['age']);
 
 user['job'] = 'developer';
+user.nation = 'korea';
+console.log(user);
