@@ -1,4 +1,4 @@
-// 함수의 유효범위(Scope)
+// 함수의 유효범위(Scope) 및 익명함수
 
 // 전역 변수
 let result_subtraction;
@@ -16,7 +16,7 @@ function multiple(a, b){
   return result;
 }
 
-let r = multiple(10, 10);
+var r = multiple(10, 10);
 console.log(r);
 
 
