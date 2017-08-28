@@ -1,5 +1,3 @@
-// 프로세스 객체 정리 할 것 2017.08.29 JJH
-
 // Process
 console.log(process.env);           // 컴퓨터 환경과 관련 정보를 가진 객체
 console.log('--------------');
