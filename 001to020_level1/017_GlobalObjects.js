@@ -28,8 +28,8 @@ console.dir(process.argv);
 // 실행되는 파일의 수를 나타 냄
 console.dir(process.argv.length);
 
-if (process.argv.length > 2){
-  console.log('세 번째 파라미터의 값 : %s', process.argv[2]);
+if (process.argv.length > 3){
+  console.log('process.argv[3], 4번째 배열안에 값 : %s', process.argv[3]);
 }
 
 // argv에 있는 모든 값을 하나씩 출력하고 싶다면 forEach()을 사용합니다.
