@@ -1,5 +1,5 @@
 // Switch 문
-let number = 3;
+const number = 3;
 
 switch (number) {
   case 1:

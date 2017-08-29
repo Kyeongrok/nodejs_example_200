@@ -1,13 +1,12 @@
-// 콜백함수(초안, 보완필요)
+function sum(a, b, callback) {
+  const result = a + b;
 
-function sum(a, b, callback){
-  let result = a + b;
-
-  callback();
-  return result;
+  callback(result);
 }
 
 // 콜백 함수
-let r = sum(10, 20, function(){
+const resultSum = sum(10, 20, function() {
   console.log('a + b를 더했습니다.');
 });
+
+resultSum;
