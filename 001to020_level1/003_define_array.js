@@ -1,13 +1,15 @@
-//javascript Array 만들기
+// javascript Array 만들기
 // [] 를 이용하는 방법
-let numbers = [1, 2, 3];
-let strings = ['hello', 'bye', 'welcome'];
+const numbers = [1, 2, 3];
+const strings = ['hello', 'bye', 'welcome'];
 
 // new Array()를 이용하는 방법. []를 이용하는 방법과 동일합니다. []를 이용하는게 좋습니다.
-let numbers2 = new Array(1, 2, 3);
-let strings2 = new Array('hello', 'bye', 'welcome');
+const numbers2 = new Array(1, 2, 3);
+const strings2 = new Array('hello', 'bye', 'welcome');
 
-console.log(typeof Array());
-console.log(typeof numbers);
-console.log(typeof numbers2);
-console.log(numbers2)
+console.log('typeof : %s', typeof Array());
+console.log('typeof : %s', typeof numbers);
+console.log('typeof : %s', typeof strings);
+console.log('typeof : %s', typeof numbers2);
+console.log('typeof : %s', typeof strings2);
+console.log('numbers : ', numbers);
