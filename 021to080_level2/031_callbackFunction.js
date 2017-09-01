@@ -5,7 +5,7 @@ function sum(a, b, callback) {
 }
 
 // 콜백 함수
-const resultSum = sum(10, 20, function() {
+const resultSum = sum(10, 20, () => {
   console.log('a + b를 더했습니다.');
 });
 

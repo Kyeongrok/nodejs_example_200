@@ -4,7 +4,7 @@ const listUser = [
   { name: 'minsup', age: 35 },
 ];
 
-listUser.forEach(function(user){
+listUser.forEach((user) => {
   console.log(user);
 });
 console.log('----------------------');
