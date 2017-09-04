@@ -1,6 +1,6 @@
 // ModuleJavascript 초안_jjh
 
-const result = require('./026_numericalExpression.js');
+const result = require('./026_numerical_expression.js');
 
 console.log(`The result is ${result.sum(1, 2)}`);
 console.log(`The result is ${result.extract(2, 2)}`);
