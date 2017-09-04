@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "cheerio-httpcli": "^0.7.0",
     "moment": "^2.18.1"
   },
   "devDependencies": {
