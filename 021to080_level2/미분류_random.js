@@ -1,13 +1,14 @@
 const randomNumber = Math.random();
+const zeroToNine = Math.floor(Math.random() * 10, 10); // 0 to 9
+const twentyToThirty = Math.floor(Math.random() * (30 - 20), 10) + 20; // 20 to 30
+const oneToTen = Math.floor(Math.random() * 10, 10) + 1; // 1 to 10
+const makeRandom = (min, max) => Math.floor(Math.random() * ((max - min) + 1), 10) + min;
+
 console.log(randomNumber);
-
-const zeroToNine = parseInt(randomNumber * 10, 10); // 0 to 9
 console.log('zeroToNine:', zeroToNine);
-
-const oneToTen = parseInt(randomNumber * 10, 10) + 1; // 1 to 10
 console.log('oneToTen:', oneToTen);
+console.log('twentyToThirty:', twentyToThirty);
 
-/*
-  난수를 생성할 일이 많다.
-  특정 숫자부터 시작 하려면 뒤에 +를 해준다.
- */
+for (let value = 1; value < 10; value += 1) {
+  console.log(makeRandom(10, 20));
+}

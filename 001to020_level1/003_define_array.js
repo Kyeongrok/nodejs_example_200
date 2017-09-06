@@ -7,9 +7,7 @@ const strings = ['hello', 'bye', 'welcome'];
 const numbers2 = new Array(1, 2, 3);
 const strings2 = new Array('hello', 'bye', 'welcome');
 
-console.log('typeof : %s', typeof Array());
-console.log('typeof : %s', typeof numbers);
-console.log('typeof : %s', typeof strings);
-console.log('typeof : %s', typeof numbers2);
-console.log('typeof : %s', typeof strings2);
 console.log('numbers : ', numbers);
+console.log('numbers2 : ', numbers2);
+console.log('strings : ', strings);
+console.log('strings2 : ', strings2);

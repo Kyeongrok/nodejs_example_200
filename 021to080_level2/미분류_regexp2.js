@@ -5,4 +5,3 @@ const replacedBracketOrSlashHyphenComma = string.replace(/[()/\-,]/g, '');
 
 console.log(replacedBracket);
 console.log(replacedBracketOrSlashHyphenComma);
-

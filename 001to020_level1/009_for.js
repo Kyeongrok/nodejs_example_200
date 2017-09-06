@@ -1,11 +1,10 @@
-// 구구단을 활용한 for 반복문
 const number = 9;
 
-for (let i = 1; i < 10; i++) {
-  console.log(number * i);
+for (let value = 1; value < 10; value += 1) {
+  console.log(number * value);
 }
 
-// for을 활요하지 않을 경우
+// for을 활용하지 않을 경우
 // let number = 9;
 // console.log(number * 1);
 // console.log(number * 2);
