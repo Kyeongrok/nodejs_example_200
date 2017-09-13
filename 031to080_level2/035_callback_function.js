@@ -9,4 +9,4 @@ const resultSum = sum(10, 20, () => {
   console.log('a + b를 더했습니다.');
 });
 
-resultSum;
+console.log(resultSum);
