@@ -1,1 +1,4 @@
-// 201709_JJH / 배열 조작 매서드 - 역순으로 변경하기 reverse() 메서드, P.67
+const numbers = [1, 2, 3, 4];
+const reversedNumbers = numbers.reverse();
+
+console.log(reversedNumbers);

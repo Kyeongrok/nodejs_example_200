@@ -1,1 +1,2 @@
-// 201709_JJH, 자바스크립트 프로젝트 북 , 배열의 길이 알아내기, P.65
+const numbers = [1, 2, 3, 4];
+console.log(numbers.length);
