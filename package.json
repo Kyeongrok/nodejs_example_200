@@ -4,18 +4,18 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "cheerio-httpcli": "^0.7.0",
-    "express": "^4.15.4",
+    "cheerio-httpcli": "^0.7.1",
+    "express": "^4.15.5",
     "http": "0.0.0",
     "moment": "^2.18.1"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
-    "eslint": "^4.5.0",
+    "eslint": "^4.7.2",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-config-airbnb-base": "^11.3.2",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-react": "^7.3.0"
+    "eslint-plugin-react": "^7.4.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
