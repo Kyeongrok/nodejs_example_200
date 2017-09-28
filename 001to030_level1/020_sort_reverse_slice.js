@@ -1,7 +1,3 @@
-// 수학 점수가 가장 높은 학생 3명 알아내기
-// 수학 기준으로 오름차순으로 정렬한 후
-// 역순으로 바꾸어서
-// 위에서 3개만 뽑기
 const studentList = [
   { name: 'kyeongrok', age: 31, math: 85, english: 87 },
   { name: 'jihyun', age: 31, math: 95, english: 97 },
@@ -12,7 +8,8 @@ const studentList = [
 ];
 
 const sorted = studentList.sort((now, next) => now.math - next.math);
-console.log(sorted);
+console.log('sorted:', sorted);
 const reversed = sorted.reverse();
+console.log('reversed:', reversed);
 const sliced = reversed.slice(0, 3);
 console.log('sliced:', sliced);
