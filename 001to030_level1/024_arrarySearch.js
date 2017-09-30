@@ -9,5 +9,8 @@ const destinationName = [
 const serchDestination = '파리';
 
 for (let i = 0; i < destinationName.length; i++) {
-  if (serchDestination === destinationName[i]) { console.log(serchDestination, '입니다'); }
+  if (serchDestination === destinationName[i]) {
+    console.log(serchDestination, '입니다');
+    break;
+  }
 }
