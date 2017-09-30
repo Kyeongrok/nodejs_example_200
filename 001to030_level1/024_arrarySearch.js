@@ -7,12 +7,13 @@ const destinationName = [
   '암스테르담',
 ];
 
-const length = destinationName.length();
+const length = destinationName.length;
 
-const serchDestination = promp('도시 조회');
+// let serchDestination = prompt('도시 조회', '도시를 입력하세요');
+// let serchDestination = prompt('도시 조회', '도시를 입력하세요');
 
 for (let i = 0; i < length; i++) {
   if (serchDestination === destinationName[i]) {
-    console.log(`${serchDestination}입니다`);
+    console.log(serchDestination + '입니다');
   } else if (i === length - 1) { console.log('해당 도시가 없습니다'); }
 }
