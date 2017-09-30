@@ -1,5 +1,3 @@
-/* eslint-disable no-plusplus */
-// 201709_JJH / For문을 사용해서 배열 조회하기, 자바스크립트 북 P.66 참고
 // 배열 선언
 const destinationName = [
   '런던',
