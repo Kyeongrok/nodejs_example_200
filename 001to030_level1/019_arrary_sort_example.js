@@ -14,6 +14,6 @@ const compare = (now, next) => {
   console.log('-------------');
   console.log('now:', now);
   console.log('next:', next);
-}
+};
 
 studentList.sort(compare);
