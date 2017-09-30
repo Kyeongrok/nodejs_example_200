@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 // 201709_JJH / For문을 사용해서 배열 조회하기, 자바스크립트 북 P.66 참고
 // 배열 선언
 const destinationName = [
@@ -9,11 +10,8 @@ const destinationName = [
 
 const length = destinationName.length;
 
-// let serchDestination = prompt('도시 조회', '도시를 입력하세요');
-// let serchDestination = prompt('도시 조회', '도시를 입력하세요');
+const serchDestination = '파리';
 
 for (let i = 0; i < length; i++) {
-  if (serchDestination === destinationName[i]) {
-    console.log(serchDestination + '입니다');
-  } else if (i === length - 1) { console.log('해당 도시가 없습니다'); }
+  if (serchDestination === destinationName[i]) { console.log(`${serchDestination}입니다`); }
 }
