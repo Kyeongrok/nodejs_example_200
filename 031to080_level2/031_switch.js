@@ -1,6 +1,6 @@
-// Switch 문
 const number = 3;
 
+let msg = '';
 switch (number) {
   case 1:
     msg = '값이 아닙니다.';
