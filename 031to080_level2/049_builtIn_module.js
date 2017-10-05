@@ -1,1 +1,6 @@
-// 내장모듈 정리하기 2017.08.29_JJH
+// 대표적인 내장 모듈
+const os = require('os');
+const fs = require('fs');
+const crypto = require('crypto');
+const url = require('url');
+const querystring = require('querystring');
