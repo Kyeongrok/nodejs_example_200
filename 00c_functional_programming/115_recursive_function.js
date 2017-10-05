@@ -3,4 +3,5 @@ const sumNumber = (start, end, accumulator) => {
   return sumNumber(start + 1, end, accumulator + start);
 };
 
-console.log(sumNumber(1, 10, 0));
+console.log('result:', sumNumber(1, 10, 0));
+
