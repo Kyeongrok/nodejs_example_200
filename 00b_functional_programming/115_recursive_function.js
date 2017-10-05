@@ -1,10 +1,9 @@
 
 function getPower(value) {
-  value *= value;
   if (value < 200) {
     return value;
   }
-  getPower(value);
+  return getPower(value * value);
 }
 
-getPower(2);
+console.log(getPower(2));
