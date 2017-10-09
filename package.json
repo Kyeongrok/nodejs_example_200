@@ -8,6 +8,7 @@
     "express": "^4.15.5",
     "http": "0.0.0",
     "moment": "^2.18.1",
+    "node-telegram-bot-api": "^0.28.0",
     "request": "^2.83.0"
   },
   "devDependencies": {
