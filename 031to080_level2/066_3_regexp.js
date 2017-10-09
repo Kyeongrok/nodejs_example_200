@@ -11,3 +11,5 @@ console.log(replacedHTag); // h태그를 찾아서 바꿈
 console.log(replacedSpace); // 공백
 console.log(replacedKorean); // 한글
 console.log(replacedHyphen); // -를 찾아서 바꿈
+
+console.log(string.replace(':::', ''));

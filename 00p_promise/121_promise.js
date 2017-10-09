@@ -9,4 +9,3 @@ new Promise((resolve) => {
   console.log('second:', result);
   return `${result}nello`;
 });
-
