@@ -1,5 +1,5 @@
 // 이벤트 삭제
-const reMoveUncaught = function (error) {
+const reMoveUncaught = function (err) {
   console.log('이벤트에 대한 리스너를 제거 합니다.');
   process.removeListener('uncaughtException', reMoveUncaught);
 };
@@ -18,7 +18,7 @@ const test = function () {
   if (count > 2) { return; }
   // 예외를 강제로 발생
   setTimeout(test, 2000);
-  error.error.error();
+  err.error.error();
 };
 
 setTimeout(test, 2000);
