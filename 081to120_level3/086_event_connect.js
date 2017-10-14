@@ -20,11 +20,12 @@ setTimeout(() => {
 let count = 0;
 const test = function () {
   count += 1;
-  if (count > 2) { return; }
+  if (count > 2) {
+    return;
+  }
   // 예외를 강제로 발생
   setTimeout(test, 3000);
-  error.error.error();
+  err.error.error();
 };
-
 setTimeout(test, 3000);
 
