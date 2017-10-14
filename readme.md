@@ -19,7 +19,7 @@ Ctrl + E : 최근 파일 목록
 Ctrl + Shift + f10 : 실행
 Ctrl + Tab : 이전 코드 
 Ctrl + D : 한줄 코드 복사 
-Ctrl + Y : 한줄 코드 삭제 
-
+Ctrl +  Y : 한줄 코드 삭제 
+Ctrl + Shift + / : 지정 된 코드 주석
 </pre>
 
