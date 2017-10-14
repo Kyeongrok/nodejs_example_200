@@ -1,4 +1,4 @@
-
+// 이벤트 연결
 const fs = require('fs');
 
 // process 객체에 exit 이벤트 연결

@@ -1,2 +1,20 @@
-// 201709_JJH 이벤트의 이해 (모던웹을 위한 Node.105)
-// 이벤트 발생
+// 이벤트 강제 발생
+
+// process 객체에 exit 이벤트 연결
+process.on('exit', (code) => {
+  console.log('exit 이벤트 발생');
+});
+
+process.on('uncaughtException', (err) => {
+  console.log('uncaught 예외 이벤트 발생');
+});
+
+process.emit('exit');
+process.emit('uncaughtException');
+process.emit('exit');
+process.emit('uncaughtException');
+
+process.exit();
+
+process.emit('exit');
+process.emit('uncaughtException');
