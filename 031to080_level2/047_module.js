@@ -1,5 +1,4 @@
-// ModuleJavascript 초안_jjh
-
+// 모듈화
 const result = require('./048_numerical_expression.js');
 
 console.log(`The result is ${result.sum(1, 2)}`);
