@@ -1,6 +1,6 @@
 const client = require('cheerio-httpcli');
 
-const url = 'https://www.digitec.ch/de/s1/producttype/tv-4?tagIds=538&take=300';
+const url = 'http://www.google.com/';
 const param = {};
 
 client.fetch(url, param, (err, $, res) => {

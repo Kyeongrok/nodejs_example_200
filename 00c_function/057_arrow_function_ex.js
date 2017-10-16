@@ -5,3 +5,9 @@ const studentList = [
 ];
 const plus = (a, b) => a + b;
 studentList.forEach(student => console.log('%s total:%d', student.name, plus(student.math, student.science)));
+
+console.log('--------------------');
+
+studentList.forEach((student) => {
+  console.log('%s total:%d', student.name, plus(student.math, student.science));
+});
