@@ -12,3 +12,4 @@ console.log(`시스템 총 메모리:${os.totalmem()}`);
 console.log(`시스템 사용 가능한 메모리:${os.freemem()}`);
 console.log(`운영체제 실행된 시간:${os.uptime()}`);
 console.log(`운영체제의 아키텍처:${os.arch()}`);
+
