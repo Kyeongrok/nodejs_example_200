@@ -1,15 +1,13 @@
-// 201709_JJH / crypto 모듈 P.79
 // Hash
 const crypto = require('crypto');
 
 const sha = crypto.createHash('sha256');
-sha.update('crypto_hash');
+sha.update('nodejs');
 const output = sha.digest('hex');
 
 console.log('crypto_hash:', output);
 
 // 암호화
-
 const key = 'Key';
 const input = 'PW';
 
