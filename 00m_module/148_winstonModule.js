@@ -1,10 +1,7 @@
 const winston = require('winston');
 const winstonDaily = require('winston-daily-rotate-file');
-// const fs = require('fs');
 const moment = require('moment');
 
-
-// const tsFormat = () => (new Date()).toLocaleTimeString();
 function tsFormat() {
   return moment().format('YYYY-MM-DD HH:mm:ss.SSS ZZ');
 }
