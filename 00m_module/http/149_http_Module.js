@@ -15,5 +15,5 @@ const testClose = function () {
 };
 
 // 강제 서버종료
-setTimeout(testClose, 10000);
+setTimeout(testClose, 5000);
 
