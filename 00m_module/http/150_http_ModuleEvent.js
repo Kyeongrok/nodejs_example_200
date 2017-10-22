@@ -1,4 +1,4 @@
-// http 모듈 sever 객체
+// http 모듈 sever 객체의 이벤트
 // 웹 서버 생성과 실행
 const http = require('http');
 
