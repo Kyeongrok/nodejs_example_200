@@ -1,2 +1,29 @@
-// 쿠키추출
-// 쿠키는 키와 값이 들어 있는 데이터로 이름, 값, 파기 날짜와 경로 정보가 있다.
+const http = require('http');
+
+http.createServer((request, response) => {
+
+    // GET cookie
+  if (request.headers.cookie) {
+      let cookie = request.headers.cookie.split(';').map(function (element) {
+          let element = element.split('=');
+          return {
+              key: element[0],
+              value: element[1]
+          };
+      });
+      response.end(`<h1>${JSON.stringify(cookie)}</h1>`);
+  }else {
+
+
+      // SET cookie
+      response.writeHead(200, {
+          'Content-Type': 'text/html',
+          'Set-Cookie': ['soju = grilledPork', 'beer = chicken']
+      });
+
+      // cookie output
+      response.end(`<h1>${'쿠키 생성함'}</h1>`);
+  }
+}).listen(50000, () => {
+  console.log('서버가 동작 중입니다, http://127.0.0.1:50000');
+});

@@ -1,9 +1,6 @@
 const http = require('http');
 
 http.createServer((request, response) => {
-  const date = new Date();
-  date.setDate(date.getDate() + 7);
-
   // cookie
   response.writeHead(200, {
     'Content-Type': 'text/html',
