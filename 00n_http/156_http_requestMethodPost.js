@@ -1,9 +1,7 @@
 const http = require('http');
 const fs = require('fs');
-const url = require('url');
 
 http.createServer((request, response) => {
-  const get = url.parse(request.url, true).query;
 
   if (request.method === 'GET') {
     fs.readFile('./example_2.html', (error, data) => {
