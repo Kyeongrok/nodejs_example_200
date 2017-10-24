@@ -1,4 +1,3 @@
-// 201709_JJH ejs module 소개
 const ejs = require('ejs');
 const fs = require('fs');
 const http = require('http');
