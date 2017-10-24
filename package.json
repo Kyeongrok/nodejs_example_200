@@ -5,10 +5,13 @@
   "main": "index.js",
   "dependencies": {
     "cheerio-httpcli": "^0.7.1",
+    "ejs": "^2.5.7",
     "express": "^4.15.5",
     "http": "0.0.0",
+    "jade": "^1.11.0",
     "moment": "^2.19.1",
     "node-telegram-bot-api": "^0.28.0",
+    "pug": "^2.0.0-rc.4",
     "request": "^2.83.0",
     "winston": "^2.4.0",
     "winston-daily-rotate-file": "^1.7.2"
