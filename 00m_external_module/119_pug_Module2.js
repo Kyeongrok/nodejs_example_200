@@ -1,4 +1,3 @@
-// 201709_JJH jade module, Node.js 프로그래밍 P.153
 const pug = require('pug');
 const fs = require('fs');
 const http = require('http');
