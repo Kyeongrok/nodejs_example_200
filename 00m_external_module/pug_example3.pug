@@ -1,26 +1,13 @@
 html
     head
         title Pug example page
-        style.
-            body {
-                color: lightskyblue;
-            }
-
-            h1 {
-                color: blue;
-            }
-        script.
-            let name = prompt("What is your name", "");
-            alert("I'm " + name);
         body
-            // annotation
-            h1 Hello Pug module
-            h2 Nice to meet you
-            a(href="https://github.com/pugjs/pug", data-set="multiple Attribute") Github for pug
-            ul
-                li Item A
-                li Item B
-                li Item C
-
-
-
+            style.
+            h1 #{table_name}
+            h2 #{number}
+            hr
+            - for(let i =1; i < 10; i++) {
+                p
+                #multiple
+                   #{number} X #{i} = #{number * i}
+            - }
