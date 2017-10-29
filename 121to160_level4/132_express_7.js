@@ -3,20 +3,22 @@ const express = require('express');
 
 const app = express();
 
-app.get('/', (request, response) => {
-  const result = [];
-  const multipleNumber = 9;
-  for (let i = 1; i < 5; i++) {
-    result.push({
-      number: `${multipleNumber}X${i}`,
-      multiple: multipleNumber * i,
-    });
-  }
-  response.send(result);
+app.get('/one', (request, response) => {
+  response.send('<a href="/two">Street 200</a>');
 });
 
-app.get('/error', (request, response) => {
-  response.status(404).send('404 ERROR');
+app.get('/two', (request, response) => {
+  response.send('<a href="/one">Street 100</a>');
+});
+
+app.get('/three/:number', (request, response) => {
+  const streetNumber = request.params.number;
+  response.send(`${streetNumber}Street`);
+});
+
+app.get('/four/:number', (request, response) => {
+  const aveNumber = request.params.number;
+  response.send(`${aveNumber}Ave`);
 });
 
 app.listen(3000, () => {
