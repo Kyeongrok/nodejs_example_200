@@ -6,7 +6,7 @@ const app = express();
 app.use((request, response) => {
   const agent = request.header('User-Agent');
   const paramName = request.query.name;
-  const browserChrome = 'Hello Chrom';
+  const browserChrome = 'Hello Chrome';
   const browserOthers = 'Hello Others';
 
   console.log(request.headers);
