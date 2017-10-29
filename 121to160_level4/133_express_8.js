@@ -1,22 +1,13 @@
 // morgan 미들웨어
 const express = require('express');
+const morgan = require('morgan');
 
 const app = express();
 
-app.get('/', (request, response) => {
-  const result = [];
-  const multipleNumber = 9;
-  for (let i = 1; i < 5; i++) {
-    result.push({
-      number: `${multipleNumber}X${i}`,
-      multiple: multipleNumber * i,
-    });
-  }
-  response.send(result);
-});
-
-app.get('/error', (request, response) => {
-  response.status(404).send('404 ERROR');
+app.use(morgan(':method + :date'));
+app.use(morgan(':status + :url'));
+app.use((request, response) => {
+  response.send('express morgan');
 });
 
 app.listen(3000, () => {
