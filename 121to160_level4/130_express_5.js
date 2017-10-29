@@ -5,13 +5,10 @@ const express = require('express');
 // express 객체 생성
 const app = express();
 
-app.use(express.static(`${__dirname} + '/multimedia`));
+app.use(express.static(`${__dirname}/multimedia`));
 app.use((request, response) => {
-  // response.writeHead('200', { 'Content-Type': 'text/html;' });
-  response.writeHead('200', { 'Content-Type': 'image/jpeg' });
-  response.end('<img src="/newyork.jpg" />');
-  // response.writeHead(200, { 'Content-Type': 'audio/mp3' });
-  // response.end('./Cullah_DaftPunk.mp3');
+  response.writeHead('200', { 'Content-Type': 'text/html;charset=utf8' });
+  response.end('<img src="/newyork.jpg" width="100%"/>');
 });
 
 app.listen(3000, () => {
