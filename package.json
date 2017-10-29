@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "cheerio-httpcli": "^0.7.1",
+    "cookie-parser": "^1.4.3",
     "ejs": "^2.5.7",
     "express": "^4.15.5",
     "http": "0.0.0",
