@@ -1,22 +1,29 @@
 // body parser 미들웨어
-const express = require('express');
 
+// 모듈 불러오기
+const express = require('express');
+const fs = require('fs');
+const bodyParser = require('body-parser');
+
+// express 객체 생성
 const app = express();
 
-app.get('/', (request, response) => {
-  const result = [];
-  const multipleNumber = 9;
-  for (let i = 1; i < 5; i++) {
-    result.push({
-      number: `${multipleNumber}X${i}`,
-      multiple: multipleNumber * i,
-    });
-  }
-  response.send(result);
+// application/x=www-form-urlencoded 파싱
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// application/json 파싱
+app.use(bodyParser.json());
+
+app.get('/', (requrest, response) => {
+
 });
 
-app.get('/error', (request, response) => {
-  response.status(404).send('404 ERROR');
+app.get('/login', (requrest, response) => {
+
+});
+
+app.post('/login', (requrest, response) => {
+
 });
 
 app.listen(3000, () => {
