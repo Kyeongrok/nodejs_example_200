@@ -1,21 +1,28 @@
+// 요청 메서드
 const express = require('express');
 
 const app = express();
 
-app.get('/', (request, response) => {
-  const result = [];
-  const multipleNumber = 9;
-  for (let i = 1; i < 5; i++) {
-    result.push({
-      number: `${multipleNumber}X${i}`,
-      multiple: multipleNumber * i,
-    });
-  }
-  response.send(result);
-});
+app.use((request, response) => {
+  const agent = request.header('User-Agent');
+  const paramName = request.query.name;
+  const browserChrome = 'Hello Chrom';
+  const browserOthers = 'Hello Others';
 
-app.get('/error', (request, response) => {
-  response.status(404).send('404 ERROR');
+  console.log(request.headers);
+  console.log(request.baseUrl);
+  console.log(request.hostname);
+  console.log(request.protocol);
+
+
+  if (agent.toLowerCase().match(/chrome/)) {
+    response.write(`<div><p>${browserChrome}</p></div>`);
+  } else {
+    response.write(`<div><p>${browserOthers}</p></div>`);
+  }
+  response.write(`<div><p>${agent}</p></div>`);
+  response.write(`<div><p>${paramName}</p></div>`);
+  response.end();
 });
 
 app.listen(3000, () => {

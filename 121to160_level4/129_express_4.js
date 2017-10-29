@@ -1,3 +1,4 @@
+// 미들웨어 개요
 const express = require('express');
 
 const app = express();

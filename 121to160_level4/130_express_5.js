@@ -1,3 +1,5 @@
+// static 미들웨어
+
 const express = require('express');
 
 const app = express();
