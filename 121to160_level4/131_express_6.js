@@ -23,7 +23,7 @@ app.use((request, response) => {
   response.write('<h1>Login ID와 PW 결과 값 입니다.</h1>');
   response.write(`<div><p>${userId}</p></div>`);
   response.write(`<div><p>${userPassword}</p></div>`);
-  response.end();
+  response.end(JSON.stringify(request.body, null, 2));
 });
 
 app.listen(3000, () => {
