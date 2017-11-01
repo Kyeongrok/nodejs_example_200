@@ -1,5 +1,5 @@
 // 모듈화
-const result = require('./143_numerical_expression.js');
+const result = require('./115_numerical_expression.js');
 
 console.log(`The result is ${result.sum(1, 2)}`);
 console.log(`The result is ${result.extract(2, 2)}`);
