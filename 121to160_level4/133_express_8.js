@@ -4,6 +4,8 @@ const morgan = require('morgan');
 
 const app = express();
 
+app.use(morgan('combined'));
+app.use(morgan('common'));
 app.use(morgan(':method + :date'));
 app.use(morgan(':status + :url'));
 app.use((request, response) => {
