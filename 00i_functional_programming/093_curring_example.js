@@ -1,4 +1,4 @@
-const coffeeMachine = liquid => espresso => espresso + '+' + liquid;
+const coffeeMachine = liquid => espresso => `${espresso}+${liquid}`;
 
 const americanoMachine = coffeeMachine('water');
 const latteMachine = coffeeMachine('milk');

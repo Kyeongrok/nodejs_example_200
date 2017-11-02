@@ -6,8 +6,3 @@ fs.readFile('./message.txt', (err, data) => {
   contents = 'replaced';
   fs.writeFile('./message.txt', contents);
 });
-
-fs.readFile('./message.txt', (err, data) => {
-  if (err) throw err;
-  console.log(data.toString());
-});
