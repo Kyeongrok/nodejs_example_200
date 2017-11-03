@@ -14,6 +14,3 @@ Math.cbrt(1); // 1
 Math.cbrt(Infinity); // Infinity
 Math.cbrt(null); // 0
 Math.cbrt(2);  // 1.2599210498948734
-
-console.log('max :', maxResult);
-console.log('min :', minResult);
