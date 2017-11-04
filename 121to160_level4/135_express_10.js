@@ -1,22 +1,22 @@
-// connet-muliparty 미드웨어hhh
+// connet-muliparty 미드웨어
 const express = require('express');
+const fs = require('fs');
+const multipart = require('connect-multiparty');
 
 const app = express();
 
+app.use(multipart({ uploadDir: `${__dirname}/connect-multipart` }));
+
 app.get('/', (request, response) => {
-  const result = [];
-  const multipleNumber = 9;
-  for (let i = 1; i < 5; i++) {
-    result.push({
-      number: `${multipleNumber}X${i}`,
-      multiple: multipleNumber * i,
-    });
-  }
-  response.send(result);
+  fs.readFile('connect-multiparty.html', (error, data) => {
+    response.send(data.toString());
+  });
 });
 
-app.get('/error', (request, response) => {
-  response.status(404).send('404 ERROR');
+app.post('/', (request, response) => {
+  console.log(request.body);
+  console.log(request.files);
+  response.redirect('/');
 });
 
 app.listen(3000, () => {
