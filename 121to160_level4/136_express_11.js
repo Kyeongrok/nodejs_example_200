@@ -1,22 +1,21 @@
+// express-session 미들웨어
+
 const express = require('express');
+const session = require('express-session');
 
 const app = express();
 
-app.get('/', (request, response) => {
-  const result = [];
-  const multipleNumber = 9;
-  for (let i = 1; i < 5; i++) {
-    result.push({
-      number: `${multipleNumber}X${i}`,
-      multiple: multipleNumber * i,
-    });
-  }
-  response.send(result);
+app.use(session({
+  secret: 'secret key',
+  resave: false,
+  saveUninitialized: true,
+}));
+
+app.use((request, response) => {
+  request.session.now = (new Date()).toUTCString();
+  response.send(request.session);
 });
 
-app.get('/error', (request, response) => {
-  response.status(404).send('404 ERROR');
-});
 
 app.listen(3000, () => {
   console.log('Server is running port 3000!');
