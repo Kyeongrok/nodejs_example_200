@@ -7,5 +7,5 @@ user.job = 'developer';
 user.nation = 'korea';
 console.log(user);
 
-const memberName = 'age';
-console.log(user[memberName]);
+const fieldName = 'age';
+console.log(user[fieldName]);
