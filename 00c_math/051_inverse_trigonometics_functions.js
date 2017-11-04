@@ -22,5 +22,3 @@ Math.atan(-Infinity);  // -1.5707963267948966
 // The angle that the line [(0,0);(x,y)] forms with the x-axis in a Cartesian coordinate system
 Math.atan(y / x);
 
-console.log('max :', maxResult);
-console.log('min :', minResult);
