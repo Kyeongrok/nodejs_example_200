@@ -1,24 +1,17 @@
-Math.asin(-2); // NaN
-Math.asin(-1); // -1.5707963267948966 (-pi/2)
-Math.asin(0); // 0
-Math.asin(0.5); // 0.5235987755982989
-Math.asin(1); // 1.5707963267948966 (pi/2)
-Math.asin(2); // NaN
+const asin1 = Math.asin(0); // 0
+const asin2 = Math.asin(1); // 1.5707963267948966
+const asin3 = Math.asin(Math.PI / 2); // NaN
 
-Math.acos(-2); // NaN
-Math.acos(-1); // 3.141592653589793
-Math.acos(0); // 1.5707963267948966
-Math.acos(0.5); // 1.0471975511965979
-Math.acos(1); // 0
-Math.acos(2); // NaN
+const acos1 = Math.acos(0); // 1.5707963267948966
+const acos2 = Math.acos(1); // 0
+const acos3 = Math.acos(-1.2); // NaN
 
-Math.atan(1); // 0.7853981633974483
-Math.atan(0); // 0
-Math.atan(-0); // -0
+const atan1 = Math.atan(Math.PI/2); // 1.0038848218538872
 
-Math.atan(Infinity); //  1.5707963267948966
-Math.atan(-Infinity); // -1.5707963267948966
-
-// The angle that the line [(0,0);(x,y)] forms with the x-axis in a Cartesian coordinate system
-Math.atan(y / x);
-
+console.log('asin1:', asin1);
+console.log('asin2:', asin2);
+console.log('asin3:', asin3);
+console.log('acos1:', acos1);
+console.log('acos2:', acos2);
+console.log('acos3:', acos3);
+console.log('atan1:', atan1);
