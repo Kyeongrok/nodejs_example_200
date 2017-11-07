@@ -5,7 +5,7 @@ const multipart = require('connect-multiparty');
 
 const app = express();
 
-app.use(multipart({ uploadDir: `${__dirname}/connect-multipart` }));
+app.use(multipart({ uploadDir: `${__dirname}/upload` }));
 
 app.get('/', (request, response) => {
   fs.readFile('connect-multiparty.html', (error, data) => {
@@ -14,9 +14,13 @@ app.get('/', (request, response) => {
 });
 
 app.post('/', (request, response) => {
-  console.log(request.body);
-  console.log(request.files);
-  response.redirect('/');
+  const imgFile = request.files.image;
+  const outputPath = `${__dirname}/upload/${Date.now()}_${imgFile.name}`;
+  console.log(outputPath);
+  console.log(request.body, request.files);
+  fs.rename(imgFile.path, outputPath, () => {
+    response.redirect('/');
+  });
 });
 
 app.listen(3000, () => {
