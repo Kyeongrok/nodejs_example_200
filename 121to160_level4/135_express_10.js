@@ -1,4 +1,4 @@
-// connet-muliparty 미드웨어
+// connet-muliparty 미들웨어
 const express = require('express');
 const fs = require('fs');
 const multipart = require('connect-multiparty');
