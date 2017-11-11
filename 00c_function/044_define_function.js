@@ -3,7 +3,8 @@ function printHello() {
 }
 printHello();
 
-function printMessage(pMessage) {
-  console.log(pMessage);
+const printBye = () => {
+  console.log('bye');
 }
-printMessage('bye');
+
+printBye();
