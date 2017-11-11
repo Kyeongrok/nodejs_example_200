@@ -1,21 +1,38 @@
+// express-session 미들웨어
 const express = require('express');
+const parseurl = require('parseurl');
+const session = require('express-session');
 
 const app = express();
 
-app.get('/', (request, response) => {
-  const result = [];
-  const multipleNumber = 9;
-  for (let i = 1; i < 5; i++) {
-    result.push({
-      number: `${multipleNumber}X${i}`,
-      multiple: multipleNumber * i,
-    });
+app.use(session({
+  secret: 'keyboard dog',
+  resave: false,
+  saveUninitialized: true,
+}));
+
+app.use((request, response, next) => {
+  if (!request.session.views) {
+    request.session.views = {};
   }
-  response.send(result);
+
+  console.log(request.session);
+
+  // get the URL
+  const pathname = parseurl(request).pathname;
+
+  // count the views
+  request.session.views[pathname] = (request.session.views[pathname] || 0) + 1;
+
+  next();
 });
 
-app.get('/error', (request, response) => {
-  response.status(404).send('404 ERROR');
+app.get('/puddle', (request, response) => {
+  response.send(`Hello puddle! you viewed this page ${request.session.views['/puddle']} times`);
+});
+
+app.get('/biggle', (request, response) => {
+  response.send(`Hello biggle! you viewed this page ${request.session.views['/biggle']} times`);
 });
 
 app.listen(3000, () => {
