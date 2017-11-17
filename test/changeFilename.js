@@ -18,7 +18,10 @@ const raiseNumber = (path, addedNumber, filenameList) => filenameList.forEach((f
   });
 });
 
-const targetPath = '../01g_express/';
-const filenameList = fs.readdirSync(targetPath);
-raiseNumber(targetPath, 2, filenameList);
+
+const targetPathList = ['../01g_express/'];
+targetPathList.forEach((targetPath) => {
+  const filenameList = fs.readdirSync(targetPath);
+  raiseNumber(targetPath, 1, filenameList);
+});
 

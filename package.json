@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "charset": "^1.0.1",
+    "cheerio": "^1.0.0-rc.2",
     "cheerio-httpcli": "^0.7.2",
     "cookie-parser": "^1.4.3",
     "ejs": "^2.5.7",

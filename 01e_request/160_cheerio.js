@@ -1,12 +1,20 @@
 const request = require('request');
 const iconv = require('iconv-lite');
 const charset = require('charset');
+const cheerio = require('cheerio');
 
-request({
+const parse = (decodedResult) => {
+  const $ = cheerio.load(decodedResult);
+  const titles = $('h3 .r');
+  console.log(titles);
+  // titles.forEach(title => console.log(title));
+};
+
+const callAndParse = callback => keyword => request({
   url: 'https://www.google.com/search',
   encoding: null,
   method: 'GET',
-  qs: { q: '신사역 맛집' },
+  qs: { q: keyword },
   timeout: 10000,
   followRedirect: true,
   maxRedirects: 10,
@@ -16,8 +24,11 @@ request({
     const enc = charset(response.headers, body);
     const decodedResult = iconv.decode(body, enc);
     console.log(decodedResult);
+
+    callback(decodedResult);
   } else {
     console.log(`error${response.statusCode}`);
   }
 });
 
+callAndParse(parse)('서울대입구역 맛집');
