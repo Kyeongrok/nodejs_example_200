@@ -18,7 +18,7 @@ const raiseNumber = (path, addedNumber, filenameList) => filenameList.forEach((f
   });
 });
 
-const targetPath = '../01b_module/';
+const targetPath = '../01f_external_module/';
 const filenameList = fs.readdirSync(targetPath);
-raiseNumber(targetPath, 12, filenameList);
+raiseNumber(targetPath, 43, filenameList);
 
