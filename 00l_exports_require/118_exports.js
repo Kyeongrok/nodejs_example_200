@@ -1,4 +1,3 @@
-const func = () => {
-  console.log('hello');
-}
-exports.printMessage = func;
+exports.printMessage = (message) => {
+  console.log(message);
+};
