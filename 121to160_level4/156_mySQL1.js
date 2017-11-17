@@ -1,19 +1,17 @@
 const mysql = require('mysql');
 
-const client = mysql.createConnection({
+const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: 'gosdk123',
-  debug: 'true',
+  database: 'comicbook',
   port: '3306',
 });
 
-client.query('use comicbook');
-client.query('select * from books', (err, result, fields) => {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log(result);
-  }
+connection.connect();
+connection.query('SELECT * from books', (error, results, fields) => {
+  if (error) throw error;
+  console.log(results);
 });
+connection.end();
 
