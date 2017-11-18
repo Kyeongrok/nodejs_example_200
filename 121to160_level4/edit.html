@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Page</title>
+</head>
+<body>
+<h1>Edit Page</h1>
+<hr />
+<form method="post">
+    <fieldset>
+        <legend>Edit Data</legend>
+        <table>
+            <tr>
+                <td><label>number</label></td>
+                <td><input type="text" name="number" value="<%= data.number %>" disabled /></td>
+            </tr>
+            <tr>
+                <td><label>genre</label></td>
+                <td><input type="text" name="genre" value="<%= data.genre %>" /></td>
+            </tr>
+            <tr>
+                <td><label>name</label></td>
+                <td><input type="text" name="name" value="<%= data.name %>"/></td>
+            </tr>
+            <tr>
+                <td><label>writer</label></td>
+                <td><input type="text" name="writer" value="<%= data.writer %>"/></td>
+            </tr>
+        </table>
+        <input type="submit"/>
+    </fieldset>
+</form>
+</body>
+</html>
