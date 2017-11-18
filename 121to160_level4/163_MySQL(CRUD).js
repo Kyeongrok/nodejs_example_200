@@ -1,4 +1,4 @@
-// mysql 모듈 사용
+// CRUD에 필요한 모듈 사용
 const mysql = require('mysql');
 const express = require('express');
 const fs = require('fs');
