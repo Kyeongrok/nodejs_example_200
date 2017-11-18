@@ -1,3 +1,4 @@
-const printMessage = require('./118_exports');
+const printSomething = require('./118_exports');
 
-printMessage.printMessage('hello');
+printSomething.printHello();
+printSomething.printMessage('bye');
