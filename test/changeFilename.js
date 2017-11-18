@@ -18,8 +18,32 @@ const raiseNumber = (path, addedNumber, filenameList) => filenameList.forEach((f
   });
 });
 
+const targetPathList = [
+  // '../00a_basic/',
+  // '../00b_loop_string/',
+  // '../00c_function/',
+  // '../00d_math/',
+  // '../00e_string/',
+  // '../00f_regexp/',
+  // '../00g_interval/',
+  // '../00h_array_operation/',
+  // '../00i_functional_programming/',
+  // '../00j_filter_map_reduce/',
+  // '../00k_promise/',
+  // '../00l_exports_require/',
+  // '../01a_event/',
+  // '../01b_module/',
+  // '../01c_fs/',
+  // '../01c_http/',
+  // '../01d_project_manage/',
+  // '../01e_request/',
+  '../01f_external_module/',
+  '../01g_express/',
+  '../01h_mysql/',
+  '../01i_telegram_bot/',
+]
 
-const targetPathList = ['../01g_express/'];
+
 targetPathList.forEach((targetPath) => {
   const filenameList = fs.readdirSync(targetPath);
   raiseNumber(targetPath, 1, filenameList);
