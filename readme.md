@@ -21,5 +21,6 @@ Ctrl + Tab : 이전 코드
 Ctrl + D : 한줄 코드 복사 
 Ctrl +  Y : 한줄 코드 삭제 
 Ctrl + Shift + / : 지정 된 코드 주석
+Ctrl + ALT + I : 소스정리 
 </pre>
 

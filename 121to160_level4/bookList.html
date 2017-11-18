@@ -25,13 +25,13 @@
     <td><%= book.name %></td>
     <td><%= book.writer %></td>
     <td><%= book.releasedate %></td>
-    <td><a href="/edit/<%= book.number %>">EDIT</a></button></td>
+    <td><a href="/modify/<%= book.number %>">EDIT</a></button></td>
     <td><a href="/delete/<%= book.number %>">DELETE</a></input></td>
 </tr>
 <% }); %>
 </table>
 <hr/>
-<form action="/insert" method="get">
+<form action="/create" method="get">
     <button type="submit">CREATE</button>
 </form>
 <script>

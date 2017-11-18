@@ -2,19 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Edit Page</title>
+    <title>Modify Page</title>
 </head>
 <body>
-<h1>Edit Page</h1>
+<h1>Modify Page</h1>
 <hr />
 <form method="post">
     <fieldset>
-        <legend>Edit Data</legend>
+        <legend>Modify Data</legend>
         <table>
-            <tr>
-                <td><label>number</label></td>
-                <td><input type="text" name="number" value="<%= data.number %>" disabled /></td>
-            </tr>
             <tr>
                 <td><label>genre</label></td>
                 <td><input type="text" name="genre" value="<%= data.genre %>" /></td>
@@ -28,7 +24,7 @@
                 <td><input type="text" name="writer" value="<%= data.writer %>"/></td>
             </tr>
         </table>
-        <input type="submit"/>
+        <input type="submit">
     </fieldset>
 </form>
 </body>
