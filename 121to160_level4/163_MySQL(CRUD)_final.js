@@ -38,14 +38,6 @@ app.get('/', (request, response) => {
   });
 });
 
-// 데이터 삭제
-app.get('/delete/:id', (request, response) => {
-  connection.query('DELETE FROM books where number=?', [request.params.id], () => {
-    // 조회 페이지로 이동
-    response.redirect('/');
-  });
-});
-
 // 데이터 추가
 app.get('/create', (request, response) => {
   fs.readFile('insertNewBook.html', 'utf-8', (error, data) => {
@@ -86,4 +78,12 @@ app.post('/modify/:id', (request, response) => {
       // 조회페이지로 이동
       response.redirect('/');
     });
+});
+
+// 데이터 삭제
+app.get('/delete/:id', (request, response) => {
+  connection.query('DELETE FROM books where number=?', [request.params.id], () => {
+    // 조회 페이지로 이동
+    response.redirect('/');
+  });
 });
