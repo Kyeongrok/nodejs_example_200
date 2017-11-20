@@ -4,10 +4,13 @@ const charset = require('charset');
 const cheerio = require('cheerio');
 
 const parse = (decodedResult) => {
+  // console.log(decodedResult);
   const $ = cheerio.load(decodedResult);
-  const titles = $('h3 .r');
-  console.log(titles);
-  // titles.forEach(title => console.log(title));
+  const titles = $('h3.r').find('a');
+  for (let i = 0; i < titles.length; i += 1) {
+    const title = $(titles[i]).text();
+    console.log(title);
+  }
 };
 
 const callAndParse = callback => keyword => request({
@@ -23,8 +26,6 @@ const callAndParse = callback => keyword => request({
   if (!error && response.statusCode === 200) {
     const enc = charset(response.headers, body);
     const decodedResult = iconv.decode(body, enc);
-    console.log(decodedResult);
-
     callback(decodedResult);
   } else {
     console.log(`error${response.statusCode}`);
