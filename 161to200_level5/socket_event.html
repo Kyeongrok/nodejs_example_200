@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SocketPage</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        window.onload = function() {
+            // 소켓연결
+            const socket = io.connect();
+            console.log('Server connection');
+
+            socket.on('msg', function (data) {
+                alert(data);
+            });
+
+            // Message 전달
+            document.getElementById('button').onclick = function () {
+                const text = document.getElementById('text').value;
+                console.log('clientmsg');
+                socket.emit('clientmsg', text);
+            };
+
+            // 실시간 Interval
+            document.getElementById('status').onclick = function () {
+                console.log('status 눌러짐');
+                socket.emit('status');
+            };
+            socket.on('msg2', function (data) {
+                document.writeln('<li>');
+                document.writeln(data);
+                document.writeln('</li>');
+            });
+        };
+
+    </script>
+</head>
+<body>
+<h1>Socket.io Page</h1>
+<ui>
+    <script>
+        console.log('body');
+        const socket = io.connect();
+        /*        socket.on('msg2', function(msg){
+                    console.log('body');
+                    alert(msg);
+                    document.writeln('<li>');
+                    document.writeln(msg);
+                    document.writeln('</li>');
+                });*/
+        console.log('body');
+    </script>
+</ui>
+<input type="text" id="text" />
+<input type="button" id="button" value="send"/>
+<input type="button" id="status" value="status"/>
+</body>
+</html>
