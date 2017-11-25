@@ -7,7 +7,7 @@ http.createServer((request, response) => {
   pathname = url.parse(request.url).pathname;
 
   if (pathname === '/') {
-    fs.readFile('./index.html', (error, data) => {
+    fs.readFile('./socket.html', (error, data) => {
       response.writeHead(200, { 'Content-Type': 'text/html' });
       response.end(data);
       console.log(url.parse(request.url));
