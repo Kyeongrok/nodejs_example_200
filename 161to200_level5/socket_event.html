@@ -5,10 +5,12 @@
     <title>SocketPage</title>
     <script src="/socket.io/socket.io.js"></script>
     <script>
+
+        // 소켓연결
+        const socket = io();
+        console.log('Server connection');
+
         window.onload = function() {
-            // 소켓연결
-            const socket = io.connect();
-            console.log('Server connection');
 
             socket.on('msg', function (data) {
                 alert(data);
@@ -40,7 +42,6 @@
 <ui>
     <script>
         console.log('body');
-        const socket = io.connect();
         /*        socket.on('msg2', function(msg){
                     console.log('body');
                     alert(msg);

@@ -1,11 +1,8 @@
-const http = require('http');
-const fs = require('fs');
+const app = require('express')();
+const server = require('http').createServer(app);
 
-const server = http.createServer((request, response) => {
-  fs.readFile('socket.html', (error, data) => {
-    response.writeHead(200, { 'Context-Type': 'text/html' });
-    response.end(data);
-  });
+app.get('/', (reuquest, response) => {
+  response.sendFile(`${__dirname}/socket.html`);
 });
 
 const io = require('socket.io')(server);

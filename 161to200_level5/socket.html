@@ -5,12 +5,8 @@
     <title>SocketPage</title>
     <script src="/socket.io/socket.io.js"></script>
     <script>
-        window.onload = function() {
-            // 소켓연결
-            const socket = io.connect();
-            console.log('Server connection');
-        };
-
+        const socket = io();
+        console.log('Server connection');
     </script>
 </head>
 <body>
