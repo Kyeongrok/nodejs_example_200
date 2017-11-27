@@ -13,7 +13,7 @@
         window.onload = function() {
 
             socket.on('msg', function (data) {
-                alert(data);
+                console.log(data);
             });
 
             // Message 전달
@@ -40,17 +40,6 @@
 <body>
 <h1>Socket.io Page</h1>
 <ui>
-    <script>
-        console.log('body');
-        /*        socket.on('msg2', function(msg){
-                    console.log('body');
-                    alert(msg);
-                    document.writeln('<li>');
-                    document.writeln(msg);
-                    document.writeln('</li>');
-                });*/
-        console.log('body');
-    </script>
 </ui>
 <input type="text" id="text" />
 <input type="button" id="button" value="send"/>
