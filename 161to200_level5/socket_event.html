@@ -12,14 +12,10 @@
 
         window.onload = function() {
 
-            socket.on('msg', function (data) {
-                console.log(data);
-            });
-
             // Message 전달
             document.getElementById('button').onclick = function () {
                 const text = document.getElementById('text').value;
-                console.log('clientmsg');
+                console.log('clientMsg -> Server');
                 socket.emit('clientmsg', text);
             };
 
@@ -35,6 +31,10 @@
             });
         };
 
+        socket.on('msg', function (data) {
+            console.log(data);
+        });
+
     </script>
 </head>
 <body>
@@ -43,6 +43,6 @@
 </ui>
 <input type="text" id="text" />
 <input type="button" id="button" value="send"/>
-<input type="button" id="status" value="status"/>
+<input type="button" id="status" value="IntervalTest"/>
 </body>
 </html>
