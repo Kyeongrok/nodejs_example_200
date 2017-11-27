@@ -14,7 +14,13 @@ const connection = mysql.createConnection({
 connection.connect();
 
 // Select 쿼리문 사용
-connection.query('SELECT * from books', (error, results, fields) => {
+connection.query('CREATE table books2 (
+                  number INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                  genre VARCHAR(20) NOT NULL,
+                  name VARCHAR(50) NOT NULL,
+                  writer VARCHAR(30) NOT NULL,
+                  releasedate date NOT NULL
+                  )' (error, results, fields) => {
   if (error) throw error;
   console.log(results);
 });
