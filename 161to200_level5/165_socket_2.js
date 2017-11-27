@@ -16,7 +16,7 @@ io.on('connection', (client) => {
   });
 
   client.on('status', () => {
-    console.log('status 받음');
+    console.log('Status event(Server)');
     setInterval(() => {
       client.emit('msg2', 'Hello socket.io');
     }, 3000);

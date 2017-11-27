@@ -21,7 +21,7 @@
 
             // 실시간 Interval
             document.getElementById('status').onclick = function () {
-                console.log('status 눌러짐');
+                console.log('Status event(Client)');
                 socket.emit('status');
             };
             socket.on('msg2', function (data) {
