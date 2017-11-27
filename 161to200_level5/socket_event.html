@@ -19,12 +19,14 @@
                 socket.emit('clientmsg', text);
             };
 
-            // 실시간 Interval
+            // 실시간 Interval 전달
             document.getElementById('status').onclick = function () {
                 console.log('Status event(Client)');
                 socket.emit('status');
             };
-            socket.on('msg2', function (data) {
+
+            // 이벤트 연결
+           socket.on('msg2', function (data) {
                 document.writeln('<li>');
                 document.writeln(data);
                 document.writeln('</li>');
