@@ -21,7 +21,7 @@ const raiseNumber = (path, addedNumber, filenameList) => filenameList.forEach((f
 const targetPathList = [
   // '../00a_basic/',
   // '../00b_loop_string/',
-  '../00c_function/',
+  '../01e_request/',
   // '../00d_math/',
   // '../00e_string/',
   // '../00f_regexp/',

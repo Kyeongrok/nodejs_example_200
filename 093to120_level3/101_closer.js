@@ -13,4 +13,3 @@ const parentFunction = grandParent(1, 2);
 const childFunction = parentFunction(11, 22);
 console.log(childFunction(111, 222));
 // 1 + 2 + 3 + 11 + 22 + 33 + 111 + 222 + 333 == 738
-

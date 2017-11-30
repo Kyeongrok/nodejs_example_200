@@ -1,6 +1,6 @@
 const sign1 = Math.sign([3]); //  1
-const sign2 = Math.sign(-3); // -1
-const sign3 = Math.sign('-3'); // -1
+const sign2 = Math.sign(-3); // crawler.js
+const sign3 = Math.sign('-3'); // crawler.js
 const sign4 = Math.sign(3/-0); //  0
 const sign5 = Math.sign(NaN); // NaN
 const sign6 = Math.sign('foo'); // NaN

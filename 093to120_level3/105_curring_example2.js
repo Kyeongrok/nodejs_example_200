@@ -8,5 +8,5 @@ const openFileAndPrint = path => fileName => fs.readFile(path + fileName, (err, 
 const thisDirOpenFileAndPrint = openFileAndPrint('./');
 const otherDirOpenFileAndPrint = openFileAndPrint('../');
 
-thisDirOpenFileAndPrint('095_sum.js');
+thisDirOpenFileAndPrint('104_curring_example.js');
 otherDirOpenFileAndPrint('package.json');

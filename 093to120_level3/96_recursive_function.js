@@ -4,4 +4,3 @@ const sumNumber = (start, end, accumulator) => {
 };
 
 console.log('result:', sumNumber(1, 10, 0));
-

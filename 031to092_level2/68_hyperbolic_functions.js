@@ -1,6 +1,6 @@
 const sinh1 = Math.sinh(0); // 0
 const sinh2 = Math.sinh(1); // 1.1752011936438014
-const sinh3 = Math.sinh(-1); // -1.1752011936438014
+const sinh3 = Math.sinh(-1); // crawler.js.1752011936438014
 
 const cosh1 = Math.cosh(0); // 1
 const cosh2 = Math.cosh(1); // 1.5430806348152437

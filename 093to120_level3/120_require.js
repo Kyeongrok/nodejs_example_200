@@ -1,4 +1,4 @@
-const printSomething = require('./118_exports');
+const printSomething = require('./119_exports');
 
 printSomething.printHello();
 printSomething.printMessage('bye');

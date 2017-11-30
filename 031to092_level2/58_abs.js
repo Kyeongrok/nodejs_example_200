@@ -1,4 +1,4 @@
-const abs1 = Math.abs('-1'); // 1
+const abs1 = Math.abs('crawler.js'); // 1
 const abs2 = Math.abs(-3.141592); // 3.141592
 const abs3 = Math.abs([2]); // 2
 const abs4 = Math.abs([1, 2]); // NaN
