@@ -1,0 +1,30 @@
+// mysql 모듈 사용
+const mysql = require('mysql');
+
+// 연결할 DB 정보입력
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'gosdk123',
+  database: 'comicbook',
+  port: '3306',
+});
+
+// 데이터베이스 연결
+connection.connect();
+
+// Select 쿼리문 사용
+connection.query('CREATE table books2 (
+                  number INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                  genre VARCHAR(20) NOT NULL,
+                  name VARCHAR(50) NOT NULL,
+                  writer VARCHAR(30) NOT NULL,
+                  releasedate date NOT NULL
+                  )' (error, results, fields) => {
+  if (error) throw error;
+  console.log(results);
+});
+
+// 연결 종료
+connection.end();
+
