@@ -13,7 +13,7 @@ http.createServer((request, response) => {
       console.log(url.parse(request.url));
     });
   } else if (pathname === '/example') {
-    fs.readFile('./example.html', (error, data) => {
+    fs.readFile('./145_example.html', (error, data) => {
       response.writeHead(200, { 'Content-Type': 'text/html' });
       response.end(data);
       console.log(url.parse(request.url));
