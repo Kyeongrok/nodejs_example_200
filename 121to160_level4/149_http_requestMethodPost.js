@@ -4,7 +4,7 @@ const fs = require('fs');
 http.createServer((request, response) => {
 
   if (request.method === 'GET') {
-    fs.readFile('./example_2.html', (error, data) => {
+    fs.readFile('./149_example_2.html', (error, data) => {
       response.writeHead(200, { 'Content-Type': 'text/html' });
       response.end(data);
       console.log(`${request.method}방식의 요청입니다`);
