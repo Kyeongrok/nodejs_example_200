@@ -13,11 +13,18 @@ const connection = mysql.createConnection({
 // 데이터베이스 연결
 connection.connect();
 
+// Update 쿼리문 사용
+connection.query('update books set genre = \'romance\', writer = \'JI\' where number = 11 and name = \'Mygiant Nerd Boyfriend\';', (error, results, fields) => {
+  if (error) throw error;
+  console.log(results);
+});
+
 // Select 쿼리문 사용
 connection.query('SELECT * from books', (error, results, fields) => {
   if (error) throw error;
   console.log(results);
 });
+
 
 // 연결 종료
 connection.end();
