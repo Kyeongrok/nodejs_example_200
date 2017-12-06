@@ -13,6 +13,12 @@ const connection = mysql.createConnection({
 // 데이터베이스 연결
 connection.connect();
 
+// Delete 쿼리문 사용
+connection.query('delete from books where number = 2 and writer = \'JI\';', (error, results, fields) => {
+  if (error) throw error;
+  console.log(results);
+});
+
 // Select 쿼리문 사용
 connection.query('SELECT * from books', (error, results, fields) => {
   if (error) throw error;
