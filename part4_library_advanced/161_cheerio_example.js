@@ -1,5 +1,5 @@
 const cheerio = require('cheerio');
-const crawler = require('../part4_library_advanced/crawler');
+const crawler = require('./crawler');
 
 const parse = (decodedResult) => {
   // console.log(decodedResult);

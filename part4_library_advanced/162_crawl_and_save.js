@@ -1,4 +1,4 @@
-const crawler = require('../part4_library_advanced/crawler');
+const crawler = require('./crawler');
 const cheerio = require('cheerio');
 const fs = require('fs');
 
