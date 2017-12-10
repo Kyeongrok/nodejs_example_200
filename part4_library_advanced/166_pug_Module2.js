@@ -3,7 +3,7 @@ const fs = require('fs');
 const http = require('http');
 
 http.createServer((request, response) => {
-  fs.readFile('pug_example.pug', 'utf-8', (error, data) => {
+  fs.readFile('166_pug_example2.pug', 'utf-8', (error, data) => {
     response.writeHead(200, { 'Content-Type': 'text/html' });
     const fn = pug.compile(data);
     response.end(fn());
