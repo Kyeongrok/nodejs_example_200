@@ -25,7 +25,5 @@ connection.query('SELECT * from books', (error, results, fields) => {
   console.log(results);
 });
 
-
 // 연결 종료
 connection.end();
-

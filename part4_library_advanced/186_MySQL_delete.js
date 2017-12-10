@@ -27,4 +27,3 @@ connection.query('SELECT * from books', (error, results, fields) => {
 
 // 연결 종료
 connection.end();
-
