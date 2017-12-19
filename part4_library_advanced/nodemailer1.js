@@ -4,8 +4,8 @@ const nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
   service: 'Gmail',
   auth: {
-    // user: '지메일아이디@gmail.com',
-    // pass: '비밀번호'
+    user: '지메일아이디@gmail.com',
+    pass: '비밀번호',
   },
 });
 
