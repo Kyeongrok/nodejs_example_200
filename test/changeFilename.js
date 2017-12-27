@@ -21,7 +21,7 @@ const raiseNumber = (path, addedNumber, filenameList) => filenameList.forEach((f
 const targetPathList = [
   // '../00a_basic/',
   // '../00b_loop_string/',
-  '../01e_request/',
+  '../numberplus/',
   // '../00d_math/',
   // '../00e_string/',
   // '../00f_regexp/',
@@ -46,6 +46,6 @@ const targetPathList = [
 
 targetPathList.forEach((targetPath) => {
   const filenameList = fs.readdirSync(targetPath);
-  raiseNumber(targetPath, -1, filenameList);
+  raiseNumber(targetPath, -9, filenameList);
 });
 

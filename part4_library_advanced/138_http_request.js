@@ -7,13 +7,13 @@ http.createServer((request, response) => {
   pathname = url.parse(request.url).pathname;
 
   if (pathname === '/') {
-    fs.readFile('./147_index.html', (error, data) => {
+    fs.readFile('./138_index.html', (error, data) => {
       response.writeHead(200, { 'Content-Type': 'text/html' });
       response.end(data);
       console.log(url.parse(request.url));
     });
   } else if (pathname === '/example') {
-    fs.readFile('./145_example.html', (error, data) => {
+    fs.readFile('./136_example.html', (error, data) => {
       response.writeHead(200, { 'Content-Type': 'text/html' });
       response.end(data);
       console.log(url.parse(request.url));
