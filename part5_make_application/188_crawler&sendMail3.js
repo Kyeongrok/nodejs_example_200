@@ -25,7 +25,8 @@ function sendMail(arHeadline) {
     to: '지메일아이디@gmail.com', // list of receivers
     subject: `${date.toLocaleDateString()} Today News`, // Subject line
     // html body
-    html: `${`<h1>IT/과학 실시간 뉴스 헤드라인</h1><h2>${arHeadline}</h2><br/><a href="http://www.infopub.co.kr">` +
+    html: `${`<h1>IT/과학 실시간 뉴스 헤드라인</h1><h2>${arHeadline}</h2><br/>
+    <a href="http://www.infopub.co.kr">` +
         '<img src="http://www.infopub.co.kr/pdspool/common/main_top/2016-11-02.jpg"/></p></a>'}`
     ,
   };

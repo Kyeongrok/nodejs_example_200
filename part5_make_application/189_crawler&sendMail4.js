@@ -69,8 +69,8 @@ const getNews = () => {
 // 0 - Sunday ~ 6 - Saturday
 const rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [0, new schedule.Range(0, 6)];
-rule.hour = 16;
-rule.minute = 23;
+rule.hour = 10;
+rule.minute = 00;
 
 const j = schedule.scheduleJob(rule, () => {
   getNews();
