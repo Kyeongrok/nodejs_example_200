@@ -26,3 +26,4 @@ request({
   const decodedResult = iconv.decode(body, 'euc-kr');
   parse(decodedResult);
 });
+
