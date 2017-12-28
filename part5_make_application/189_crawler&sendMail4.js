@@ -70,7 +70,7 @@ const getNews = () => {
 const rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [0, new schedule.Range(0, 6)];
 rule.hour = 10;
-rule.minute = 00;
+rule.minute = 10;
 
 const j = schedule.scheduleJob(rule, () => {
   getNews();
