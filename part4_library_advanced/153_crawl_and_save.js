@@ -3,7 +3,6 @@ const cheerio = require('cheerio');
 const fs = require('fs');
 
 const parse = (decodedResult) => {
-  // console.log(decodedResult);
   const $ = cheerio.load(decodedResult);
   const titles = $('h3.r').find('a');
   titles.each((index, element) => {
