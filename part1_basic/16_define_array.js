@@ -1,5 +1,3 @@
-// javascript Array 만들기
-// [] 를 이용하는 방법
 const numbers = [1, 2, 3];
 const strings = ['hello', 'bye', 'welcome'];
 
