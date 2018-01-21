@@ -13,8 +13,16 @@ const connection = mysql.createConnection({
 // 데이터베이스 연결
 connection.connect();
 
-// Update 쿼리문 사용
-connection.query('update books set genre = \'romance\', writer = \'JI\' where number = 11 and name = \'Mygiant Nerd Boyfriend\';', (error, results, fields) => {
+// Update 쿼리문 사용, 한 필드 수정(genre 변경)
+connection.query('update books set genre = \'action\' where number = 2 and name = \'Mygiant Nerd Boyfriend\';'
+  , (error, results, fields) => {
+    if (error) throw error;
+    console.log(results);
+  });
+
+// Update 쿼리문 사용, 여러 필드 수정 (genre, writer 변경)
+connection.query('update books set genre = \'romance\', writer = \'JI\' where number = 2 ' +
+    'and name = \'Mygiant Nerd Boyfriend\';', (error, results, fields) => {
   if (error) throw error;
   console.log(results);
 });
