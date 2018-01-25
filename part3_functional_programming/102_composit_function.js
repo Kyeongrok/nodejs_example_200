@@ -4,7 +4,6 @@ const add10 = x => x + 10;
 const plus = (a, b) => a + b;
 const minus = (a, b) => a - b;
 
-
 // (20 + 10) * 5
 console.log(multiple5(add10(20)));
 
